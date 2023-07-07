@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load mapia_footer %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Mapia SERVER · admin') }}{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static "mapia_theme/mapia-theme.css" %}">
+{% endblock %} 
+
+{% block branding %}
+<h1 id="site-name">
+    <img src="{% static 'images/mapia_server_icon.png' %}" style="height: 40px"/>
+    <a href="{% url 'admin:index' %}">&nbsp; Mapia<sup style="font-size: 12px;">&#174;</sup> <span style="font-weight: 800;">SERVER</span> </a>
+</h1>
+{% endblock %}
+
+{% block footer %}
+<br/><br/>
+<p class="mapia-footer"><strong>&copy; {% giscube_copyright_year %} MapiaTechnologies </strong></p>
+<br/>
+{% endblock %}
